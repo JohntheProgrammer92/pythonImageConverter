@@ -9,7 +9,10 @@ setup(
 	long_description_content_type='text/markdown',
 	author='http://github.com/Johntheprogrammer92',
 	url='http://github.com/Johntheprogrammer92/pyImgConvert',
+    install_requires=[
+		'pillow>=7.2.0'],
     packages=['pyImgconvert'],
+	
     entry_points={
 		'console_scripts' : [
 			'pic=pyImgConvert.imgConvert:main'
