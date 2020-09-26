@@ -18,7 +18,7 @@ def get_dirList(path):
     dirList.sort()
     return dirList
 
-def main(args=None):
+def main(args=list):
     if len(args) != 3 :
         print("CLI requires two arguments")
 
