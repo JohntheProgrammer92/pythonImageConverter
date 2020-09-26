@@ -59,6 +59,6 @@ def main(args):
               
 if __name__ == '__main__':
     try:
-        sys.exit(main(sys.argv[0:]))
+        sys.exit(main(sys.argv))
     except KeyboardInterrupt:
         pass
