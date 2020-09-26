@@ -19,7 +19,9 @@ def get_dirList(path):
     dirList.sort()
     return dirList
 
-def main(args=list):
+def main(args=None):
+    if args is None:
+        args = sys.argv
     if len(args) != 3 :
         print(""" 
 USAGE: 
