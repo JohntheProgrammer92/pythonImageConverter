@@ -3,11 +3,11 @@ import os
 from PIL import Image
 """
 USAGE: 
-$ python pic [input filename] [output filename]
-example: pic test.png test.jpg
+$ python pyConverter [input filename] [output filename]
+example: pyConverter test.png test.jpg
 
-$ python pic [input directory] [output file type]
-example: pic ./res/ jpg
+$ python pyConverter [input directory] [output file type]
+example: pyConverter ./res/ jpg
 
 """
 def get_dirList(path):
@@ -18,7 +18,7 @@ def get_dirList(path):
     dirList.sort()
     return dirList
 
-def main(args):
+def main(args=None):
     if len(args) != 3 :
         print("CLI requires two arguments")
 
