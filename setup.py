@@ -10,7 +10,7 @@ setup(
 	author='http://github.com/Johntheprogrammer92',
 	url='http://github.com/Johntheprogrammer92/pyImgConvert',
     packages=['pyImgconvert'],
-	py_modules=['setup'],
+	py_modules=[''],
     entry_points={
 		'console_scripts' : [
 			'pic=pyImgConvert.imgConvert:main'
