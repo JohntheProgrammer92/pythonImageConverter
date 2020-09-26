@@ -3,11 +3,11 @@ import os
 from PIL import Image
 """
 USAGE: 
-$ python pyConverter [input filename] [output filename]
-example: pyConverter test.png test.jpg
+$ python pic [input filename] [output filename]
+example: pic test.png test.jpg
 
-$ python pyConverter [input directory] [output file type]
-example: pyConverter ./res/ jpg
+$ python pic [input directory] [output file type]
+example: pic ./res/ jpg
 
 """
 def get_dirList(path):
