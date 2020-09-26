@@ -11,7 +11,7 @@ setup(
 	url='http://github.com/Johntheprogrammer92/pyImgConvert',
     install_requires=[
 		'pillow>=7.2.0'],
-    packages=['imgConvert'],
+    packages=['pyImgConvert'],
 	
     entry_points={
 		'console_scripts' : [
