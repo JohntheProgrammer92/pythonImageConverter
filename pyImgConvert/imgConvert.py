@@ -2,12 +2,13 @@ import sys
 import os
 from PIL import Image
 """
-USAGE: 
-$ python pyConverter [input filename] [output filename]
-example: pyConverter test.png test.jpg
 
-$ python pyConverter [input directory] [output file type]
-example: pyConverter ./res/ jpg
+USAGE: 
+pic [input filename] [output filename]
+example: pic test.png test.jpg
+
+pic [input directory] [output file type]
+example: pic ./res/ jpg
 
 """
 def get_dirList(path):
@@ -18,11 +19,16 @@ def get_dirList(path):
     dirList.sort()
     return dirList
 
-def main(args=None):
-    if args is None:
-        args = sys.argv
+def main(args=list):
     if len(args) != 3 :
-        print("CLI requires two arguments")
+        print(""" 
+USAGE: 
+pic [input filename] [output filename]
+example: pic test.png test.jpg
+
+pic [input directory] [output file type]
+example: pic ./res/ jpg
+""")
 
     else:
         if os.path.isdir(args[1]) == False:
@@ -61,6 +67,6 @@ def main(args=None):
               
 if __name__ == '__main__':
     try:
-        sys.exit(main(sys.argv))
+        sys.exit(main(sys.argv[0:]))
     except KeyboardInterrupt:
         pass
