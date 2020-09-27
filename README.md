@@ -1,5 +1,5 @@
 # PIC - pythonImageConverter
-This project is a part of my Capstone for my associate's degree. It is designed to provide a fast means to convert image file types. This repo is for the CLI portion of the project.
+A lightweight and easy to use image type converter built in Python as a deliverable for my Capstone project.
 
 ## Installation
 
