@@ -1,5 +1,5 @@
 # PIC - pythonImageConverter
-A lightweight and easy to use image type converter built in Python as a deliverable for my Capstone project.
+A lightweight and easy to use image type converter. Built in Python as a deliverable for my Capstone project.
 
 ## Installation
 
