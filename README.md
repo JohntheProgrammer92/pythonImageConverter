@@ -1,10 +1,10 @@
-# pyImgConvert(PIC)
+# PIC - pythonImageConverter
 This project is a part of my Capstone for my associate's degree. It is designed to provide a fast means to convert image file types. This repo is for the CLI portion of the project.
 
 ## Installation
 
 ```powershell
-pip install git+https://github.com/JohntheProgrammer92/pyImgConvert.git
+pip install git+https://github.com/JohntheProgrammer92/pythonImageConverter.git
 ```
 
 ## Usage

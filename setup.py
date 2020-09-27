@@ -1,21 +1,21 @@
 from setuptools import setup
 
 setup(
-	name='pyImgConvert',
+	name='pythonImageConverter',
 	version='1.0.0',
 	license="MIT",
 	description='Convert image types using CLI',
 	long_description=open('README.md').read(),
 	long_description_content_type='text/markdown',
 	author='http://github.com/Johntheprogrammer92',
-	url='http://github.com/Johntheprogrammer92/pyImgConvert',
+	url='http://github.com/Johntheprogrammer92/pythonImageConverter',
     install_requires=[
 		'pillow>=7.2.0'],
-    packages=['pyImgConvert'],
+    packages=['pythonImageConverter'],
 	
     entry_points={
 		'console_scripts' : [
-			'pic=pyImgConvert.imgConvert:main'
+			'pic=pythonImageConverter.pic:main'
 		]
 	}
 )
