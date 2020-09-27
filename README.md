@@ -4,7 +4,7 @@ This project is a part of my Capstone for my associate's degree. It is designed 
 ## Installation
 
 ```powershell
-pip install git+https://github.com/JohntheProgrammer92/pythonImageConverter.git
+pip install pythonImageConverter
 ```
 
 ## Usage
