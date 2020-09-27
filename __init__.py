@@ -1,1 +1,1 @@
-from . pyImgConvert import *
+from . pythonImageConverter import *
