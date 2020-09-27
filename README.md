@@ -9,19 +9,19 @@ pip install pythonImageConverter
 
 ## Usage
 
-* ##### For single pictures:
+#### For single pictures:
 
 ```powershell
 pic [input file name] [output file name]
 ```
 
-* ##### For entire directories:
+#### For entire directories:
 
 ```powershell
 pic [directory name] [output file type]
 ```
 
-### Examples
+## Examples
 
 #### Single Files
 
