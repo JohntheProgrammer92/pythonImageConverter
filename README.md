@@ -21,8 +21,22 @@ pic [input file name] [output file name]
 pic [directory name] [output file type]
 ```
 
+### Examples
+
+#### Single Files
+
+```powershell
+pic test.png test.jpg
+```
+
+#### Directories
+
+```powershell
+pic ./ png
+```
+
 ## Todo
 
 * add support for inner folders
-* add support ignoring certain file types
+* add support for ignoring certain file types
 * finish GUI 
