@@ -35,6 +35,24 @@ pic test.png test.jpg
 pic ./ png
 ```
 
+## Supported Image types
+
+  * BMP
+  * DIB
+  * EPS
+  * ICNS
+  * ICO
+  * IM
+  * JPEG
+  * JPEG 2000
+  * MSP
+  * PCX
+  * PNG
+  * PPM
+  * SGI
+  * TGA
+  * XBM
+  
 ## Todo
 
 * add support for inner folders
