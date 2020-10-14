@@ -1,0 +1,3 @@
+[console_scripts]
+pic = pythonImageConverter.pic:main
+

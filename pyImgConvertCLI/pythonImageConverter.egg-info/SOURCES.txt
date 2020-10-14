@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pythonImageConverter/pic.py
+pythonImageConverter.egg-info/PKG-INFO
+pythonImageConverter.egg-info/SOURCES.txt
+pythonImageConverter.egg-info/dependency_links.txt
+pythonImageConverter.egg-info/entry_points.txt
+pythonImageConverter.egg-info/requires.txt
+pythonImageConverter.egg-info/top_level.txt
