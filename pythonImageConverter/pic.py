@@ -21,7 +21,7 @@ def get_dirList(path):
     return dirList
 
 def main(args=None):
-    print(args)
+    os.system(args[1])
     if args is None:
         args = sys.argv
     if args[1] != "GUI":
