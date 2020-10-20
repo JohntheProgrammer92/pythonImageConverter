@@ -1,6 +1,7 @@
 README.md
 setup.cfg
 setup.py
+pythonImageConverter/gui.py
 pythonImageConverter/pic.py
 pythonImageConverter.egg-info/PKG-INFO
 pythonImageConverter.egg-info/SOURCES.txt

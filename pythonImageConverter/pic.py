@@ -1,7 +1,7 @@
 import sys
 import os
 from PIL import Image
-from gui import execute
+from gui import *
 """
 
 USAGE: 
