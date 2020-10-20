@@ -1,4 +1,5 @@
 import sys, os
+from PIL import Image
 from PyQt5 import QtCore
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel, QFileDialog ,QPushButton,QListWidget, QCheckBox, QListWidgetItem, QComboBox
@@ -42,6 +43,7 @@ class MainWindow(QMainWindow):
 
         #image preview
         self.label = QLabel(self)
+        print(os.getcwd())
         self.setPreview('res/default.png')
         
         #drop down for file type selection
@@ -62,12 +64,12 @@ class MainWindow(QMainWindow):
                         "SGI",
                         "TGA",
                         "XBM"])
-        self.cb.setGeometry(265,215,80,30)
+        self.cb.setGeometry(320,215,80,30)
 
         #convert button
         self.convert = QPushButton('Convert',self)
-        self.convert.setGeometry(10,10,75,50)
-        self.convert.clicked.connect(self.)
+        self.convert.setGeometry(300,250,120,60)
+        self.convert.clicked.connect(self.convertBtn)
 
 
 
@@ -93,22 +95,24 @@ class MainWindow(QMainWindow):
         if self.check.text() == "directory":
             if self.check.isChecked() == True:
                 fileNameD = QFileDialog.getExistingDirectory(self, 'Choose a Folder','C:/')
-                files = self.get_dirList(fileNameD)
-                for i in files:
-                    if not os.path.isdir(fileNameD+"/"+i):
-                        item = QListWidgetItem(i)
-                        self.list[str(item)] = str(fileNameD+"/"+i)
-                        self.fileList.addItem(item)
-                return fileNameD
+                if fileNameD != '':
+                    files = self.get_dirList(fileNameD)
+                    for i in files:
+                        if not os.path.isdir(fileNameD+"/"+i):
+                            item = QListWidgetItem(i)
+                            self.list[str(item)] = str(fileNameD+"/"+i)
+                            self.fileList.addItem(item)
+                    return fileNameD
                 
             else:
                 fileNameF = QFileDialog.getOpenFileName(self, 'Choose a Picture', 'C:/')
-                item = QListWidgetItem(fileNameF[0].split('/')[-1])
-                self.list[str(item)] = str(fileNameF[0])
-                self.fileList.addItem(item)
-                self.setPreview(fileNameF[0])
-                return fileNameF
-                
+                if fileNameF != ('', ''):
+                    item = QListWidgetItem(fileNameF[0].split('/')[-1])
+                    self.list[str(item)] = str(fileNameF[0])
+                    self.fileList.addItem(item)
+                    self.setPreview(fileNameF[0])
+                    return fileNameF
+                 
     def removeItem(self):
         item = self.fileList.currentItem()
         if item:   
@@ -120,12 +124,33 @@ class MainWindow(QMainWindow):
         item = self.list[str(self.fileList.currentItem())]
         self.setPreview(item)
 
+
+
+    def convertBtn(self):
+        for i in self.list:
+            i = self.list[i]            
+            ext = i.split('.')[1]
+            newExt = str(self.cb.currentText())
+            try:
+                im = Image.open(i)
+                rgb_im = im.convert('RGB')
+                print(i.replace(ext, newExt))
+                rgb_im.save(i.replace(ext, newExt), quality = 95)
+            except Exception as e:
+
+                if hasattr(e,"msg"):
+                    print(e.msg)
+                else:
+                    print(e)
+
+
       
-        
+def execute():
+    app = QApplication(sys.argv)
+    w = MainWindow()
+    w.show()
 
+    sys.exit(app.exec_())
 
-app = QApplication(sys.argv)
-w = MainWindow()
-w.show()
-
-sys.exit(app.exec_())
+if __name__=='__main__':
+    execute()
