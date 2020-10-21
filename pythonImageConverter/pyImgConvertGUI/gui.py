@@ -1,4 +1,4 @@
-import sys, os, pkg_resources
+import sys, os, pkg_resources, zipfile
 from PIL import Image
 from PyQt5 import QtCore
 from PyQt5.QtGui import QPixmap, QIcon
@@ -98,7 +98,7 @@ class MainWindow(QMainWindow):
         if self.check.text() == "directory":
             if self.check.isChecked() == True:
                 fileNameD = QFileDialog.getExistingDirectory(self, 'Choose a Folder','C:/')
-                if fileNameD != '':
+                if fileNameD != '':            
                     files = self.get_dirList(fileNameD)
                     for i in files:
                         if not os.path.isdir(fileNameD+"/"+i):
@@ -106,15 +106,34 @@ class MainWindow(QMainWindow):
                             self.list[str(item)] = str(fileNameD+"/"+i)
                             self.fileList.addItem(item)
                     return fileNameD
-                
+
             else:
-                fileNameF = QFileDialog.getOpenFileName(self, 'Choose a Picture', 'C:/')
+                fileNameF = QFileDialog.getOpenFileNames(self, 'Choose a Picture', 'C:/')
                 if fileNameF != ('', ''):
-                    item = QListWidgetItem(fileNameF[0].split('/')[-1])
-                    self.list[str(item)] = str(fileNameF[0])
-                    self.fileList.addItem(item)
-                    self.setPreview(fileNameF[0])
+                    print(fileNameF)
+                    for i in fileNameF[0]:
+                        if ".zip" in i:
+                            with zipfile.ZipFile(i) as zf:
+                                for j in zf.infolist():
+                                    j = j.filename.split('/')[-1]
+                                    print(j)
+                                    path = i.replace(i.split('.')[-1],"/")
+                                    path += j                           
+                                    print(path)
+                                    
+                                    if not os.path.isdir(path):
+                                        item = QListWidgetItem(j)
+                                        self.list[str(item)] = str(path)
+                                        self.fileList.addItem(item)
+                            return fileNameF
+                    
+                        else:
+                            item = QListWidgetItem(i.split('/')[-1])
+                            self.list[str(item)] = str(i)
+                            self.fileList.addItem(item)
+                            self.setPreview(i)
                     return fileNameF
+                        
                  
     def removeItem(self):
         item = self.fileList.currentItem()
