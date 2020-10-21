@@ -116,11 +116,8 @@ class MainWindow(QMainWindow):
                             with zipfile.ZipFile(i) as zf:
                                 for j in zf.infolist():
                                     j = j.filename.split('/')[-1]
-                                    print(j)
                                     path = i.replace(i.split('.')[-1],"/")
                                     path += j                           
-                                    print(path)
-                                    
                                     if not os.path.isdir(path):
                                         item = QListWidgetItem(j)
                                         self.list[str(item)] = str(path)
