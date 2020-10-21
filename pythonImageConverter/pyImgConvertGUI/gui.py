@@ -110,7 +110,6 @@ class MainWindow(QMainWindow):
             else:
                 fileNameF = QFileDialog.getOpenFileNames(self, 'Choose a Picture', 'C:/')
                 if fileNameF != ('', ''):
-                    print(fileNameF)
                     for i in fileNameF[0]:
                         if ".zip" in i:
                             with zipfile.ZipFile(i) as zf:

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pythonImageConverter
-Version: 1.0.8.0
+Version: 1.0.8.1
 Summary: Convert image types using CLI
 Home-page: http://github.com/Johntheprogrammer92/pythonImageConverter
 Author: http://github.com/Johntheprogrammer92
@@ -36,6 +36,8 @@ Description: # PIC - pythonImageConverter
         
         ## Examples
         
+        ### CLI
+        
         #### Single Files
         
         ```powershell
@@ -48,9 +50,22 @@ Description: # PIC - pythonImageConverter
         pic ./ png
         ```
         
-        #### GUI
+        ### GUI
         
         ![GUI PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/ReadmePic.PNG)
+        
+        #### choosing ZIP archives as a source
+        
+        Because zip archives are treated like single objects do not select directory:
+        
+        ![ZIP1 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip1.PNG)
+        
+        Press browse and then select the archive just as you would an individual file:
+        
+        ![ZIP2 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip2.PNG)
+        
+        ![ZIP3 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip3.PNG)
+        
         
         ## Supported Image types
         
@@ -69,10 +84,6 @@ Description: # PIC - pythonImageConverter
           * SGI
           * TGA
           * XBM
-          
-        ## Todo
-        
-        * Fix support for zipped folders
         
 Platform: UNKNOWN
 Description-Content-Type: text/markdown
