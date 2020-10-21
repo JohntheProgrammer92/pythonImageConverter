@@ -1,3 +1,0 @@
-include ./pyImgConvertGUI
-include ./pyImgConvertGUI/res
-include ./pyImgConvertGUI/gui.py

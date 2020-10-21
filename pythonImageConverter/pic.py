@@ -1,7 +1,7 @@
 import sys
 import os
 from PIL import Image
-from pyImgConvertGUI.gui import execute
+from pythonImageConverter.pyImgConvertGUI.gui import execute
 """
 
 USAGE: 
