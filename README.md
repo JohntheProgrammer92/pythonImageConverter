@@ -50,11 +50,14 @@ pic ./ png
 #### choosing ZIP archives as a source
 
 Because zip archives are treated like single objects do not select directory:
+
 ![ZIP1 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip1.PNG)
 
 Press browse and then select the archive just as you would an individual file:
-![ZIP1 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip2.PNG)
-![ZIP1 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip3.PNG)
+
+![ZIP2 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip2.PNG)
+
+![ZIP3 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip3.PNG)
 
 
 ## Supported Image types
