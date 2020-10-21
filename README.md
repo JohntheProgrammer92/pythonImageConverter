@@ -62,7 +62,3 @@ pic ./ png
   * SGI
   * TGA
   * XBM
-  
-## Todo
-
-* Fix support for zipped folders
