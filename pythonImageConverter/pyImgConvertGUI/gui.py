@@ -1,9 +1,12 @@
-import sys, os
+import sys, os, pkg_resources
 from PIL import Image
 from PyQt5 import QtCore
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import QMainWindow, QApplication, QLabel, QFileDialog ,QPushButton,QListWidget, QCheckBox, QListWidgetItem, QComboBox
 
+this_dir,this_file = os.path.split(__file__)
+iconPath = os.path.join(str(this_dir),'res','bigicon.png')
+picPath = os.path.join(str(this_dir),'res','default.png')
 class pic:
     def __init__(self,path,name):
         self.path = path
@@ -18,7 +21,7 @@ class MainWindow(QMainWindow):
         self.width = 475
         self.height = 375
         self.title = "Python Image Converter - PIC"
-        self.setWindowIcon(QIcon("res/bigicon.png"))
+        self.setWindowIcon(QIcon(str(iconPath)))
         self.setWindowTitle(self.title)
         self.setGeometry(50,50,self.width,self.height)
         
@@ -44,7 +47,7 @@ class MainWindow(QMainWindow):
         #image preview
         self.label = QLabel(self)
         print(os.getcwd())
-        self.setPreview('res/default.png')
+        self.setPreview(str(picPath))
         
         #drop down for file type selection
         self.cb = QComboBox(self)
@@ -118,7 +121,7 @@ class MainWindow(QMainWindow):
         if item:   
             del self.list[str(self.fileList.currentItem())]
             self.fileList.takeItem(self.fileList.row(item))
-            self.setPreview('res/default.png')
+            self.setPreview(str(picPath))
 
     def clickRow(self,row):
         item = self.list[str(self.fileList.currentItem())]
