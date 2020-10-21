@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
 	name='pythonImageConverter',
-	version='1.0.7.9',
+	version='1.0.8.0',
 	license="MIT",
 	description='Convert image types using CLI',
 	long_description=open('README.md').read(),
