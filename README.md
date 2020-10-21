@@ -65,6 +65,4 @@ pic ./ png
   
 ## Todo
 
-* add support for inner folders
-* add support for ignoring certain file types
-* finish GUI 
+* Fix support for zipped folders
