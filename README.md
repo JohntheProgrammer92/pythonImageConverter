@@ -43,7 +43,7 @@ pic ./ png
 
 #### GUI
 
-![GUI PIC](/pythonImageConverter/pythonImageConverter/pyImgConvertGUI/res/ReadmePic.PNG)
+![GUI PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/ReadmePic.PNG)
 
 ## Supported Image types
 
