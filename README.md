@@ -21,6 +21,12 @@ pic [input file name] [output file name]
 pic [directory name] [output file type]
 ```
 
+#### To launch the GUI:
+
+```powershell
+pic GUI
+```
+
 ## Examples
 
 #### Single Files
@@ -34,6 +40,10 @@ pic test.png test.jpg
 ```powershell
 pic ./ png
 ```
+
+#### GUI
+
+![GUI PIC](/pythonImageConverter/pythonImageConverter/pyImgConvertGUI/res/ReadmePic.PNG)
 
 ## Supported Image types
 
