@@ -185,7 +185,6 @@ class MainWindow(QMainWindow):
             try:
                 im = Image.open(i)
                 rgb_im = im.convert('RGB')
-                print(i.replace(ext, newExt))
                 rgb_im.save(i.replace(ext, newExt), quality = 95)
             except Exception as e:
 
