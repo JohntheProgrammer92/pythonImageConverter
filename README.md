@@ -74,6 +74,7 @@ Press browse and then select the archive just as you would an individual file:
   * PCX
   * PNG
   * PPM
+  * SVG
   * SGI
   * TGA
   * XBM
