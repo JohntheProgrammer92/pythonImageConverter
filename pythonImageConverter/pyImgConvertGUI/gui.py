@@ -133,16 +133,16 @@ class MainWindow(QMainWindow):
                 if fileNameF != ('', ''):
                     for i in fileNameF[0]:
                         if ".zip" in i:
+                            path = i.replace('.zip',"/")
                             with zipfile.ZipFile(i) as zf:
-                                for j in zf.infolist():
-                                    j = j.filename.split('/')[-1]
-                                    path = i.replace(i.split('.')[-1],"/")
-                                    path += j                           
-                                    if not os.path.isdir(path):
-                                        item = QListWidgetItem(j)
-                                        self.list[str(item)] = str(path)
-                                        self.fileList.addItem(item)
-                            return fileNameF
+                                zf.extractall(path)
+                            files = self.get_dirList(path)
+                            for j in files:
+                                if not os.path.isdir(path+"/"+j):
+                                    item = QListWidgetItem(j)
+                                    self.list[str(item)] = str(path+"/"+j)
+                                    self.fileList.addItem(item)
+                            return path
                     
                         else:
                             item = QListWidgetItem(i.split('/')[-1])
