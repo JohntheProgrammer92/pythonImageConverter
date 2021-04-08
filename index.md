@@ -1,37 +1,80 @@
-## Welcome to GitHub Pages
+# PIC - pythonImageConverter
+A lightweight and easy to use image type converter. Built in Python as a deliverable for my Capstone project.
 
-You can use the [editor on GitHub](https://github.com/JohntheProgrammer92/pythonImageConverter/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Installation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```powershell
+pip install pythonImageConverter
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Usage
 
-### Jekyll Themes
+#### For single pictures:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JohntheProgrammer92/pythonImageConverter/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```powershell
+pic [input file name] [output file name]
+```
 
-### Support or Contact
+#### For entire directories:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```powershell
+pic [directory name] [output file type]
+```
+
+#### To launch the GUI:
+
+```powershell
+pic GUI
+```
+
+## Examples
+
+### CLI
+
+#### Single Files
+
+```powershell
+pic test.png test.jpg
+```
+
+#### Directories
+
+```powershell
+pic ./ png
+```
+
+### GUI
+
+![GUI PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/ReadmePic.PNG)
+
+#### choosing ZIP archives as a source
+
+Because zip archives are treated like single objects do not select directory:
+
+![ZIP1 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip1.PNG)
+
+Press browse and then select the archive just as you would an individual file:
+
+![ZIP2 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip2.PNG)
+
+![ZIP3 PIC](https://raw.githubusercontent.com/JohntheProgrammer92/pythonImageConverter/master/pythonImageConverter/pyImgConvertGUI/res/zip3.PNG)
+
+
+## Supported Image types
+
+  * BMP
+  * DIB
+  * EPS
+  * ICNS
+  * ICO
+  * IM
+  * JPEG
+  * JPEG 2000
+  * MSP
+  * PCX
+  * PNG
+  * PPM
+  * SVG
+  * SGI
+  * TGA
+  * XBM
